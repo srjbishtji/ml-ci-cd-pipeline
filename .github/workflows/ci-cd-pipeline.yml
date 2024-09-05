@@ -28,13 +28,13 @@ jobs:
 
     - name: Train Model
       run: |
-        python model/train.py # Ensure this path is correct
+        python models/train.py  # Updated directory path to 'models'
 
     - name: Evaluate Model
       run: |
-        python model/evaluate.py # Ensure this path is correct
+        python models/evaluate.py  # Updated directory path to 'models'
 
     - name: Run Unit Tests
       run: |
-        python -m unittest discover -s tests # Ensure the tests folder and files are set up correctly
+        python -m unittest discover -s tests  # Ensure 'tests' folder and files are set up correctly
 
