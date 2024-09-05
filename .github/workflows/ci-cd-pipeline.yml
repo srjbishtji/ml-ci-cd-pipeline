@@ -14,10 +14,10 @@ jobs:
 
     steps:
     - name: Checkout code
-      uses: actions/checkout@v2
+      uses: actions/checkout@v3 # Use the latest stable version
 
     - name: Set up Python
-      uses: actions/setup-python@v2
+      uses: actions/setup-python@v4 # Use the latest stable version
       with:
         python-version: '3.8'
 
@@ -28,13 +28,13 @@ jobs:
 
     - name: Train Model
       run: |
-        python model/train.py
+        python model/train.py # Ensure this path is correct
 
     - name: Evaluate Model
       run: |
-        python model/evaluate.py
+        python model/evaluate.py # Ensure this path is correct
 
     - name: Run Unit Tests
       run: |
-        python -m unittest discover -s tests
+        python -m unittest discover -s tests # Ensure the tests folder and files are set up correctly
 
